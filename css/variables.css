@@ -1,0 +1,66 @@
+/* ══════════════════════════════════════════════
+   VARIABLES.CSS — Design tokens
+   Paleta "biblioteca antigua" + tipografía
+   ══════════════════════════════════════════════ */
+
+:root {
+  /* ── Paleta de colores ─────────────────────── */
+  --amarillo-pollito: #e4c36a;
+  --amarillo-hover:   #d4a843;
+  --cafe-oscuro:      #3b2613;
+  --cafe-medio:       #7a5c3e;
+  --cafe-claro:       #a68b6b;
+  --beige-fondo:      #f3ece0;
+  --beige-carta:      #faf6ee;
+  --blanco-hueso:     #fdfcf8;
+
+  /* ── Semánticos ────────────────────────────── */
+  --text-primary:     var(--cafe-oscuro);
+  --text-secondary:   var(--cafe-medio);
+  --text-muted:       var(--cafe-claro);
+  --border:           var(--cafe-medio);
+  --border-light:     rgba(122, 92, 62, .25);
+  --accent:           var(--amarillo-pollito);
+  --accent-hover:     var(--amarillo-hover);
+  --surface:          var(--beige-carta);
+  --background:       var(--beige-fondo);
+
+  /* ── Tipografía ────────────────────────────── */
+  --font-heading:  'Playfair Display', 'Georgia', serif;
+  --font-body:     'Lora', 'Georgia', serif;
+
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.5rem;
+  --fs-xl:   2rem;
+  --fs-2xl:  2.75rem;
+  --fs-3xl:  3.5rem;
+
+  --fw-normal:  400;
+  --fw-medium:  500;
+  --fw-bold:    700;
+
+  /* ── Espaciado ─────────────────────────────── */
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* ── Bordes / sombras ──────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+
+  --shadow-sm:   0  1px  3px rgba(59,38,19,.08);
+  --shadow-md:   0  4px 12px rgba(59,38,19,.10);
+  --shadow-lg:   0  8px 28px rgba(59,38,19,.12);
+
+  /* ── Transiciones ──────────────────────────── */
+  --ease-smooth:  cubic-bezier(.4, 0, .2, 1);
+  --duration:     280ms;
+}
