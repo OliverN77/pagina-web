@@ -17,7 +17,36 @@
 <body>
 
   <!-- ═══════════════════════════════════════════
-       0. LANDING PAGE
+       NAVBAR — Navegación global (visible en Home y en toda la página)
+       ═══════════════════════════════════════════ -->
+  <nav class="site-nav" id="site-nav">
+    <div class="container site-nav__inner">
+      <a href="#landing" class="site-nav__brand" aria-label="Ir al inicio">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Comunicación</span>
+      </a>
+      <button class="site-nav__toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span class="site-nav__hamburger"></span>
+      </button>
+      <ul class="site-nav__list" id="nav-list">
+        <li><a href="#landing" class="site-nav__link">Inicio</a></li>
+        <li><a href="#sobre-comunicacion" class="site-nav__link">Comunicación</a></li>
+        <li><a href="#jakobson" class="site-nav__link">Jakobson</a></li>
+        <li><a href="#funciones" class="site-nav__link">Funciones</a></li>
+        <li><a href="#estilos" class="site-nav__link">Estilos</a></li>
+        <li><a href="#no-verbal" class="site-nav__link">No Verbal</a></li>
+        <li><a href="#pilares" class="site-nav__link">Pilares</a></li>
+        <li><a href="#asertiva" class="site-nav__link">Asertiva</a></li>
+        <li><a href="#comparacion" class="site-nav__link">Comparación</a></li>
+        <li><a href="#trad-vs-jakobson" class="site-nav__link">Trad. vs Jakobson</a></li>
+        <li><a href="#adso" class="site-nav__link">ADSO</a></li>
+        <li><a href="#equipo" class="site-nav__link">Equipo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       0. LANDING PAGE (HOME)
        ═══════════════════════════════════════════ -->
   <section class="landing" id="landing">
     <div class="landing__bg">
@@ -73,56 +102,283 @@
        1.5. SOBRE LA COMUNICACIÓN — Introducción
        ═══════════════════════════════════════════ -->
   <section class="intro" id="sobre-comunicacion">
-    <div class="container intro__layout">
-      <div class="intro__text reveal">
-        <span class="hero__tag">Introducción</span>
-        <h2>¿Qué es la Comunicación?</h2>
-        <p>
-          La comunicación es mucho más que el simple acto de hablar: es el proceso
-          mediante el cual los seres humanos compartimos ideas, emociones, conocimientos
-          y experiencias. Desde un gesto hasta una palabra escrita, cada forma de
-          comunicación construye puentes entre las personas y nos permite vivir en
-          sociedad.
-        </p>
-        <p>
-          Su importancia es fundamental en todos los ámbitos de la vida. En el campo
-          profesional, una comunicación efectiva es la diferencia entre un proyecto
-          exitoso y uno que fracasa. En el campo personal, nos permite establecer
-          relaciones significativas basadas en la comprensión y el respeto mutuo.
-        </p>
-        <div class="intro__highlight">
+    <div class="container">
+      
+      <!-- Introducción conceptual -->
+      <div class="intro__layout">
+        <div class="intro__text reveal">
+          <span class="hero__tag">Introducción</span>
+          <h2>¿Qué es la Comunicación y su Importancia?</h2>
           <p>
-            «Comunicar no es únicamente transmitir información; es conectar, entender
-            al otro y construir significado compartido. Sin comunicación, no hay
-            colaboración, y sin colaboración, no hay progreso.»
+            La comunicación es mucho más que el simple acto de emitir palabras: es el proceso
+            fundamental mediante el cual los seres humanos compartimos ideas, emociones, conocimientos
+            y experiencias. Desde un gesto hasta una línea de código o un documento técnico, cada acto
+            comunicativo construye puentes entre las personas y hace posible la vida en sociedad.
           </p>
+          <p>
+            Su importancia es decisiva en todos los ámbitos. En el campo profesional —especialmente en
+            el desarrollo de software—, una comunicación efectiva garantiza la correcta interpretación de
+            requerimientos, previene errores costosos y fomenta una colaboración armónica. En el plano
+            personal, es el cimiento insustituible para construir relaciones basadas en el respeto y la empatía.
+          </p>
+          <div class="intro__highlight">
+            <p>
+              «Comunicar no es únicamente transmitir información; es conectar, entender
+              al otro y construir significado compartido. Sin comunicación, no hay
+              colaboración, y sin colaboración, no hay progreso.»
+            </p>
+          </div>
+        </div>
+
+        <div class="intro__visual reveal">
+          <div class="intro__summary-card">
+            <div class="intro__summary-header">
+              <span class="intro__summary-icon"><i class="fa-solid fa-arrows-spin"></i></span>
+              <h3>El Circuito de la Comunicación</h3>
+            </div>
+            <p class="intro__summary-lead">
+              Todo proceso comunicativo involucra una interacción dinámica entre seis elementos esenciales:
+            </p>
+            <ul class="intro__summary-list">
+              <li><strong>Emisor:</strong> Quien genera, codifica y transmite la información.</li>
+              <li><strong>Receptor:</strong> Quien recibe, decodifica e interpreta el mensaje.</li>
+              <li><strong>Mensaje:</strong> La idea, dato, emoción o contenido transmitido.</li>
+              <li><strong>Canal:</strong> El medio físico o digital por donde viaja la señal.</li>
+              <li><strong>Código:</strong> El sistema estructurado de signos o idioma compartido.</li>
+              <li><strong>Contexto:</strong> El entorno situacional que otorga sentido al acto.</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="intro__visual reveal">
-        <div class="intro__stat-grid">
-          <div class="intro__stat">
-            <div class="intro__stat-icon"><i class="fa-solid fa-comments"></i></div>
-            <span class="intro__stat-title">Verbal</span>
-            <span class="intro__stat-desc">Palabras habladas o escritas que transmiten ideas concretas</span>
-          </div>
-          <div class="intro__stat">
-            <div class="intro__stat-icon"><i class="fa-solid fa-hand-point-up"></i></div>
-            <span class="intro__stat-title">No Verbal</span>
-            <span class="intro__stat-desc">Gestos, postura y expresiones que complementan el mensaje</span>
-          </div>
-          <div class="intro__stat">
-            <div class="intro__stat-icon"><i class="fa-solid fa-people-arrows"></i></div>
-            <span class="intro__stat-title">Interpersonal</span>
-            <span class="intro__stat-desc">Intercambio directo entre dos o más personas</span>
-          </div>
-          <div class="intro__stat">
-            <div class="intro__stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
-            <span class="intro__stat-title">Digital</span>
-            <span class="intro__stat-desc">Comunicación mediada por tecnología y herramientas digitales</span>
-          </div>
+      <!-- TIPOS DE COMUNICACIÓN -->
+      <div class="intro__types-block">
+        <div class="intro__block-header reveal">
+          <span class="intro__badge">Clasificación Esencial</span>
+          <h3 class="intro__block-title">Tipos de Comunicación</h3>
+          <p class="intro__block-subtitle">
+            Las siete modalidades fundamentales mediante las cuales los seres humanos codificamos, estructuramos y transmitimos el significado.
+          </p>
+        </div>
+
+        <div class="intro__types-grid reveal-children">
+          <!-- 1. Verbal -->
+          <article class="intro__type-card">
+            <div class="intro__type-header">
+              <span class="intro__type-icon"><i class="fa-solid fa-comments"></i></span>
+              <span class="intro__type-tag">Oral &amp; Voz</span>
+            </div>
+            <h4>Verbal</h4>
+            <p class="intro__type-desc">
+              Intercambio de mensajes mediante la voz y la palabra hablada. Se enriquece con la entonación, modulación, pausas y velocidad, ofreciendo una retroalimentación directa y en tiempo real.
+            </p>
+            <div class="intro__type-examples">
+              <strong>Ejemplos:</strong> Conversaciones directas, debates, conferencias magistrales, llamadas telefónicas y presentaciones orales.
+            </div>
+          </article>
+
+          <!-- 2. No Verbal -->
+          <article class="intro__type-card">
+            <div class="intro__type-header">
+              <span class="intro__type-icon"><i class="fa-solid fa-hand-point-up"></i></span>
+              <span class="intro__type-tag">Corporal &amp; Gestos</span>
+            </div>
+            <h4>No Verbal</h4>
+            <p class="intro__type-desc">
+              Mensajes emitidos sin palabras a través de la kinésica: expresiones faciales, contacto visual, postura y microexpresiones que complementan, enfatizan o contradicen lo verbal.
+            </p>
+            <div class="intro__type-examples">
+              <strong>Ejemplos:</strong> Sonrisas genuinas, brazos cruzados en señal de reserva, contacto visual sostenido, asentir con la cabeza y ceño fruncido.
+            </div>
+          </article>
+
+          <!-- 3. Escrita -->
+          <article class="intro__type-card">
+            <div class="intro__type-header">
+              <span class="intro__type-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+              <span class="intro__type-tag">Registro Gráfico</span>
+            </div>
+            <h4>Escrita</h4>
+            <p class="intro__type-desc">
+              Codificación mediante caracteres alfabéticos, tipografía y símbolos sobre soporte físico o digital. Permite la permanencia del mensaje y su análisis pausado y diferido en el tiempo.
+            </p>
+            <div class="intro__type-examples">
+              <strong>Ejemplos:</strong> Documentación de software, libros, correos electrónicos, cartas manuscritas, manuales y especificaciones técnicas.
+            </div>
+          </article>
+
+          <!-- 4. Física -->
+          <article class="intro__type-card">
+            <div class="intro__type-header">
+              <span class="intro__type-icon"><i class="fa-solid fa-handshake"></i></span>
+              <span class="intro__type-tag">Proxémica &amp; Contacto</span>
+            </div>
+            <h4>Física</h4>
+            <p class="intro__type-desc">
+              Comunicación tangible anclada en el contacto corporal directo y la gestión del espacio físico compartido (proxémica). Comunica cercanía, jerarquía o afecto según la distancia interpersonal.
+            </p>
+            <div class="intro__type-examples">
+              <strong>Ejemplos:</strong> Apretón de manos profesional, palmada de apoyo en el hombro, abrazos, distancia personal en reuniones y proximidad física.
+            </div>
+          </article>
+
+          <!-- 5. Auditiva -->
+          <article class="intro__type-card">
+            <div class="intro__type-header">
+              <span class="intro__type-icon"><i class="fa-solid fa-ear-listen"></i></span>
+              <span class="intro__type-tag">Sonido &amp; Acústica</span>
+            </div>
+            <h4>Auditiva</h4>
+            <p class="intro__type-desc">
+              Recepción y decodificación de mensajes a través del canal auditivo sin intervención obligada de la palabra. Abarca señales sonoras, timbres, ritmos y silencios cargados de significado.
+            </p>
+            <div class="intro__type-examples">
+              <strong>Ejemplos:</strong> Sirenas de alerta, campanadas de reloj, notificaciones acústicas de sistema, aplausos colectivos y melodías ambientales.
+            </div>
+          </article>
+
+          <!-- 6. Visual -->
+          <article class="intro__type-card">
+            <div class="intro__type-header">
+              <span class="intro__type-icon"><i class="fa-solid fa-eye"></i></span>
+              <span class="intro__type-tag">Imagen &amp; Óptica</span>
+            </div>
+            <h4>Visual</h4>
+            <p class="intro__type-desc">
+              Transmisión instantánea de conceptos mediante recursos gráficos, formas, colores, diagramas y composición visual. El cerebro procesa los estímulos ópticos con una alta tasa de retención.
+            </p>
+            <div class="intro__type-examples">
+              <strong>Ejemplos:</strong> Infografías, señales de tránsito, diagramas de arquitectura UML, códigos de colores en dashboards y logotipos.
+            </div>
+          </article>
+
+          <!-- 7. Virtual -->
+          <article class="intro__type-card intro__type-card--featured">
+            <div class="intro__type-header">
+              <span class="intro__type-icon"><i class="fa-solid fa-network-wired"></i></span>
+              <span class="intro__type-tag">Telemática &amp; Redes</span>
+            </div>
+            <h4>Virtual</h4>
+            <p class="intro__type-desc">
+              Interacción mediada por computadores, plataformas web y redes telemáticas. Integra canales síncronos y asíncronos derribando barreras geográficas, esencial en el trabajo moderno en software.
+            </p>
+            <div class="intro__type-examples">
+              <strong>Ejemplos:</strong> Videoconferencias en Teams/Meet, mensajería instantánea en Slack/Discord, repositorios en GitHub y plataformas colaborativas.
+            </div>
+          </article>
         </div>
       </div>
+
+      <!-- ESTILOS DE COMUNICACIÓN: FORMAL E INFORMAL -->
+      <div class="intro__styles-block">
+        <div class="intro__block-header reveal">
+          <span class="intro__badge">Registros Comunicativos</span>
+          <h3 class="intro__block-title">Estilos de Comunicación: Formal e Informal</h3>
+          <p class="intro__block-subtitle">
+            Cómo modulamos el registro, el vocabulario y las fórmulas de cortesía según la relación con el interlocutor y el entorno social.
+          </p>
+        </div>
+
+        <div class="intro__styles-grid reveal-children">
+          <!-- Estilo Formal -->
+          <article class="intro__style-card intro__style-card--formal">
+            <div class="intro__style-top">
+              <span class="intro__style-icon"><i class="fa-solid fa-landmark"></i></span>
+              <span class="intro__style-badge">Protocolo &amp; Rigor</span>
+            </div>
+            <h4>Estilo Formal</h4>
+            <p class="intro__style-def">
+              Se emplea en contextos estructurados o institucionales donde rigen jerarquías, normas de respeto y protocolos establecidos. Su objetivo primordial es la precisión, la seriedad y evitar ambigüedades.
+            </p>
+            <div class="intro__style-features">
+              <h5>Características clave</h5>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Vocabulario técnico, cuidado y desprovisto de modismos o vulgarismos.</li>
+                <li><i class="fa-solid fa-check"></i> Tratamiento de cortesía y distancia respetuosa (<em>«Usted», «Estimado/a»</em>).</li>
+                <li><i class="fa-solid fa-check"></i> Estructura lógica secuencial, sintaxis cuidada y tono objetivo y sereno.</li>
+                <li><i class="fa-solid fa-check"></i> Lenguaje corporal comedido, postura erguida y gestos medidos.</li>
+              </ul>
+            </div>
+            <div class="intro__style-contexts">
+              <strong>Contextos habituales:</strong> Ámbito laboral y corporativo, sustentaciones académicas, contratos legales, trámites institucionales y correspondencia oficial.
+            </div>
+            <div class="intro__style-example">
+              <span class="intro__style-example-label">Ejemplo aplicado:</span>
+              <p>«Estimado equipo de desarrollo: Se ha completado la revisión del sprint. Agradecemos su puntualidad en la entrega de la documentación técnica para la validación del cliente.»</p>
+            </div>
+          </article>
+
+          <!-- Estilo Informal -->
+          <article class="intro__style-card intro__style-card--informal">
+            <div class="intro__style-top">
+              <span class="intro__style-icon"><i class="fa-solid fa-mug-hot"></i></span>
+              <span class="intro__style-badge">Cercanía &amp; Confianza</span>
+            </div>
+            <h4>Estilo Informal</h4>
+            <p class="intro__style-def">
+              Surge de manera espontánea y natural en relaciones estrechas de afecto, camaradería o confianza. Se distingue por su flexibilidad expresiva, calidez emocional y ausencia de rigidez protocolaria.
+            </p>
+            <div class="intro__style-features">
+              <h5>Características clave</h5>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Vocabulario coloquial, frases directas y expresiones cotidianas compartidas.</li>
+                <li><i class="fa-solid fa-check"></i> Tratamiento de cercanía y confianza (tuteo o trato directo: <em>«Tú», «Vos», «Che»</em>).</li>
+                <li><i class="fa-solid fa-check"></i> Libertad gramatical, interjecciones expresivas y tono afectivo.</li>
+                <li><i class="fa-solid fa-check"></i> Alta expresividad gestual, risas, proximidad física y soltura postural.</li>
+              </ul>
+            </div>
+            <div class="intro__style-contexts">
+              <strong>Contextos habituales:</strong> Conversaciones familiares, charlas casuales con compañeros, pausas de café, grupos de mensajería social y momentos distendidos.
+            </div>
+            <div class="intro__style-example">
+              <span class="intro__style-example-label">Ejemplo aplicado:</span>
+              <p>«¡Hola chicos! Ya subí los cambios que estuvimos viendo hoy. Échenle un ojo cuando tengan un rato libre y me cuentan si les parece bien o si ajustamos algo.»</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Tabla comparativa síntesis -->
+        <div class="intro__styles-table-wrap reveal">
+          <table class="card-table card-table--comparison">
+            <thead>
+              <tr>
+                <th>Criterio</th>
+                <th>Estilo Formal</th>
+                <th>Estilo Informal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Objetivo Principal</strong></td>
+                <td>Transmitir información precisa con rigor, respeto y apego a normas.</td>
+                <td>Fortalecer lazos de cercanía, afecto y complicidad cotidiana.</td>
+              </tr>
+              <tr>
+                <td><strong>Relación entre Interlocutores</strong></td>
+                <td>Profesional, jerárquica, institucional o de mutuo respeto formal.</td>
+                <td>Familiar, amistosa, de confianza previa o compañeros cercanos.</td>
+              </tr>
+              <tr>
+                <td><strong>Tratamiento Lingüístico</strong></td>
+                <td>Usted, cargos oficiales, fórmulas de saludo y despedida protocolarias.</td>
+                <td>Tuteo, sobrenombres afectuosos, saludos relajados (<em>«¡Hola!», «¿Qué tal?»</em>).</td>
+              </tr>
+              <tr>
+                <td><strong>Registro Léxico</strong></td>
+                <td>Culto, técnico, sintaxis completa, sin modismos ni abreviaturas.</td>
+                <td>Coloquial, frases breves, expresiones idiomáticas y muletillas.</td>
+              </tr>
+              <tr>
+                <td><strong>Canales Comunes</strong></td>
+                <td>Informes técnicos, correos formales, actas, oficios y presentaciones ejecutivas.</td>
+                <td>Charlas en persona, llamadas casuales, notas rápidas y chats personales.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -404,7 +660,7 @@
         <article class="card" data-expandable id="card-agresivo-pasivo">
           <div class="card__header">
             <span class="card__icon"><i class="fa-solid fa-volcano"></i></span>
-            <span class="card__title">Explosivo Cíclico</span>
+            <span class="card__title">Agresivo-Pasivo</span>
             <span class="card__toggle">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
             </span>
@@ -605,11 +861,127 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
+       6.5. LOS CUATRO PILARES DE LA COMUNICACIÓN
+       ═══════════════════════════════════════════ -->
+  <section id="pilares">
+    <div class="container">
+      <div class="divider"><span class="divider__ornament"><i class="fa-solid fa-diamond"></i> <i class="fa-solid fa-diamond"></i> <i class="fa-solid fa-diamond"></i></span></div>
+      <div class="section-title reveal">
+        <h2>Los Pilares de la Comunicación</h2>
+        <p>Las cuatro habilidades fundamentales para una comunicación efectiva</p>
+      </div>
+
+      <div class="grid-4 reveal-children">
+
+        <!-- Asertividad -->
+        <article class="card card--pillar" data-expandable id="card-pilar-asertividad">
+          <div class="card__header">
+            <span class="card__icon"><i class="fa-solid fa-scale-balanced"></i></span>
+            <span class="card__title">Asertividad</span>
+            <span class="card__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="card__body">
+            <div class="card__body-inner">
+              <p>Es la habilidad de expresar ideas, sentimientos y necesidades de forma clara, honesta y directa, respetando al mismo tiempo los derechos y opiniones de los demás.</p>
+              <span class="card__label">Estilos de comunicación</span>
+              <table class="card__table">
+                <thead>
+                  <tr><th>Estilo</th><th>Descripción</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Pasivo</strong></td><td>Se evitan mostrar opiniones o sentimientos por miedo o para no molestar, priorizando siempre las necesidades ajenas.</td></tr>
+                  <tr><td><strong>Agresivo</strong></td><td>Se defienden los puntos de vista imponiéndose, atacando o usando un tono elevado que vulnera los derechos del otro.</td></tr>
+                  <tr><td><strong>Asertivo</strong></td><td>El punto medio equilibrado; permite defender las propias posturas con calma, firmeza y sin dañar a nadie.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- Claridad -->
+        <article class="card card--pillar" data-expandable id="card-pilar-claridad">
+          <div class="card__header">
+            <span class="card__icon"><i class="fa-solid fa-lightbulb"></i></span>
+            <span class="card__title">Claridad</span>
+            <span class="card__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="card__body">
+            <div class="card__body-inner">
+              <p>Es la capacidad de transmitir un mensaje de forma directa, sencilla y organizada para que el receptor lo entienda exactamente como fue pensado, evitando confusiones, malentendidos o dobles interpretaciones.</p>
+              <span class="card__label">Método</span>
+              <ul class="card__method-list">
+                <li><strong>Lenguaje sencillo:</strong> Evita tecnicismos innecesarios, palabras rebuscadas o frases demasiado largas. Ve directo al grano.</li>
+                <li><strong>Estructura el mensaje:</strong> Organiza tus ideas con un orden lógico (inicio, núcleo y conclusión o llamado a la acción). Haz preguntas abiertas como «¿qué dudas te quedan sobre esto?» en lugar de un simple «¿entendiste?».</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Escucha Activa -->
+        <article class="card card--pillar" data-expandable id="card-pilar-escucha">
+          <div class="card__header">
+            <span class="card__icon"><i class="fa-solid fa-ear-listen"></i></span>
+            <span class="card__title">Escucha Activa</span>
+            <span class="card__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="card__body">
+            <div class="card__body-inner">
+              <p>Es la habilidad de concentrarse por completo en el mensaje del interlocutor, comprendiendo no solo sus palabras, sino también sus emociones e intenciones, y demostrándole que está siendo verdaderamente escuchado.</p>
+              <p>No significa simplemente oír o guardar silencio mientras el otro habla; implica una participación psicológica y corporal activa que complementa a la perfección la asertividad y la claridad.</p>
+              <span class="card__label">Método</span>
+              <ul class="card__method-list">
+                <li><strong>Validación emocional:</strong> Reconocer los sentimientos del otro sin juzgarlos («entiendo que esto te frustre»), lo que genera empatía instantánea.</li>
+                <li><strong>Parafraseo:</strong> Repetir con tus propias palabras lo que entendiste para confirmar que vas por el mismo camino («si no entendí mal, lo que me estás diciendo es...»).</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Empatía -->
+        <article class="card card--pillar" data-expandable id="card-pilar-empatia">
+          <div class="card__header">
+            <span class="card__icon"><i class="fa-solid fa-heart-pulse"></i></span>
+            <span class="card__title">Empatía</span>
+            <span class="card__toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </div>
+          <div class="card__body">
+            <div class="card__body-inner">
+              <p>Es la capacidad de sintonizar con el mundo emocional de la otra persona, comprendiendo sus sentimientos, perspectivas y necesidades desde su lugar, y haciéndole saber que su experiencia es válida.</p>
+              <p>Mientras que la claridad y la asertividad aseguran que tu mensaje se entienda, la empatía es el puente que garantiza que la otra persona se sienta segura, respetada y conectada contigo.</p>
+              <span class="card__label">Niveles de empatía</span>
+              <table class="card__table">
+                <thead>
+                  <tr><th>Nivel</th><th>Descripción</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Empatía cognitiva</strong></td><td>Entender intelectualmente el punto de vista del otro («Sé lo que piensas»).</td></tr>
+                  <tr><td><strong>Empatía emocional</strong></td><td>Conectar con lo que el otro siente a nivel humano («Siento tu dolor/alegría»).</td></tr>
+                  <tr><td><strong>Preocupación empática</strong></td><td>El impulso de actuar para apoyar a la persona si lo necesita («Estoy aquí para ayudarte»).</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        7. ASERTIVA
        ═══════════════════════════════════════════ -->
   <section class="asertiva" id="asertiva">
     <div class="container asertiva__layout">
       <div class="asertiva__text reveal">
+        <span class="hero__tag">Pilar Fundamental</span>
         <h2>Asertiva</h2>
         <p>
           La comunicación asertiva es un estilo de comunicación que implica expresar
@@ -640,13 +1012,16 @@
         </div>
       </div>
 
-      <div class="asertiva__image reveal">
+      <figure class="asertiva__image reveal">
         <img
           src="assets/jakobson/jakobson-infografia.jpg"
           alt="Infografía sobre comunicación — Funciones del lenguaje de Jakobson por Salomé López Estrada"
           loading="lazy"
         >
-      </div>
+        <figcaption class="asertiva__caption">
+          <i class="fa-solid fa-palette"></i> Infografía: Funciones del lenguaje de Jakobson — por Salomé López Estrada
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -707,6 +1082,164 @@
           <h3 class="adso__card-title">Negociación de Plazos</h3>
           <p class="adso__card-desc">Facilita la negociación con clientes y superiores sobre plazos de entrega y recursos necesarios para el proyecto.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       7.6. COMPARACIÓN: TRADICIONAL vs. ASERTIVA
+       ═══════════════════════════════════════════ -->
+  <section class="comparison" id="comparacion">
+    <div class="container">
+      <div class="divider"><span class="divider__ornament"><i class="fa-solid fa-diamond"></i> <i class="fa-solid fa-diamond"></i> <i class="fa-solid fa-diamond"></i></span></div>
+      <div class="section-title reveal">
+        <h2>Tradicional vs. Asertiva</h2>
+        <p>Comparación entre los estilos de comunicación</p>
+      </div>
+
+      <div class="comparison__intro reveal">
+        <div class="comparison__columns">
+          <div class="comparison__col">
+            <div class="comparison__col-icon"><i class="fa-solid fa-rotate-left"></i></div>
+            <h3>Comunicación Tradicional</h3>
+            <p>Suele referirse a los estilos con los que crecemos culturalmente de forma automática: el pasivo (callar para evitar conflictos) o el agresivo (imponerse para ganar).</p>
+          </div>
+          <div class="comparison__col comparison__col--accent">
+            <div class="comparison__col-icon"><i class="fa-solid fa-check-double"></i></div>
+            <h3>Comunicación Asertiva</h3>
+            <p>Es un modelo consciente y entrenado que busca el equilibrio, llegando a un acuerdo mutuo que respeta a ambas partes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison__table-wrap reveal">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Método Tradicional</th>
+              <th>Método Asertivo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Objetivo</strong></td>
+              <td>Ganar la discusión o evitar el conflicto a toda costa.</td>
+              <td>Llegar a un acuerdo mutuo respetando a ambas partes.</td>
+            </tr>
+            <tr>
+              <td><strong>Enfoque</strong></td>
+              <td>Centrado en la culpa («Tú siempre haces...») o en la sumisión.</td>
+              <td>Centrado en la responsabilidad («Yo me siento... cuando pasa...»).</td>
+            </tr>
+            <tr>
+              <td><strong>Emociones</strong></td>
+              <td>Se reprimen (pasivo) o explotan (agresivo).</td>
+              <td>Se identifican, se calman y se expresan con respeto.</td>
+            </tr>
+            <tr>
+              <td><strong>Escucha</strong></td>
+              <td>Se oye para responder, defenderse o contraatacar.</td>
+              <td>Se escucha activamente para comprender la postura del otro.</td>
+            </tr>
+            <tr>
+              <td><strong>Límites</strong></td>
+              <td>No existen (se deja pisotear) o son rígidos y violentos.</td>
+              <td>Son claros, firmes y expresados con educación.</td>
+            </tr>
+            <tr>
+              <td><strong>Resultado</strong></td>
+              <td>Resentimiento, malentendidos o ruptura de relaciones.</td>
+              <td>Solución de problemas y fortalecimiento de los vínculos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       7.7. MÉTODO TRADICIONAL vs. JAKOBSON
+       ═══════════════════════════════════════════ -->
+  <section class="comparison comparison--dark" id="trad-vs-jakobson">
+    <div class="container">
+      <div class="section-title reveal" style="position:relative;z-index:2">
+        <h2 style="color:var(--amarillo-pollito)">Método Tradicional vs. Jakobson</h2>
+        <p style="color:rgba(253,252,248,.6)">Dos enfoques para entender la comunicación</p>
+      </div>
+
+      <div class="comparison__intro reveal" style="position:relative;z-index:2">
+        <div class="comparison__columns comparison__columns--dark">
+          <div class="comparison__col comparison__col--dark-item">
+            <div class="comparison__col-icon"><i class="fa-solid fa-arrow-right-long"></i></div>
+            <h3>Modelo Tradicional</h3>
+            <p>Se basa en un esquema <strong>lineal y unidireccional</strong>: un emisor envía un mensaje a un receptor a través de un canal. Inspirado en los trabajos de Aristóteles y el modelo de Shannon-Weaver (1948), se centra en la transmisión eficaz de información sin profundizar en las funciones o intenciones del lenguaje.</p>
+            <div class="comparison__elements">
+              <span>Emisor</span>
+              <i class="fa-solid fa-arrow-right"></i>
+              <span>Mensaje</span>
+              <i class="fa-solid fa-arrow-right"></i>
+              <span>Receptor</span>
+            </div>
+          </div>
+          <div class="comparison__col comparison__col--dark-item comparison__col--accent-dark">
+            <div class="comparison__col-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3>Modelo de Jakobson</h3>
+            <p>Propone un esquema <strong>multifuncional e integral</strong> con seis elementos interconectados: emisor, receptor, mensaje, contexto, canal y código. Cada elemento se vincula con una función del lenguaje específica, reconociendo que toda comunicación cumple múltiples propósitos simultáneamente.</p>
+            <div class="comparison__elements">
+              <span>Emisor</span>
+              <span>Receptor</span>
+              <span>Mensaje</span>
+              <span>Contexto</span>
+              <span>Canal</span>
+              <span>Código</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison__table-wrap reveal" style="position:relative;z-index:2">
+        <table class="comparison-table comparison-table--dark">
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Modelo Tradicional</th>
+              <th>Modelo de Jakobson</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Origen</strong></td>
+              <td>Aristóteles (retórica clásica), Shannon &amp; Weaver (1948).</td>
+              <td>Roman Jakobson, <em>Linguistics and Poetics</em> (1960).</td>
+            </tr>
+            <tr>
+              <td><strong>Elementos</strong></td>
+              <td>3 básicos: emisor, mensaje, receptor.</td>
+              <td>6 elementos: emisor, receptor, mensaje, contexto, canal, código.</td>
+            </tr>
+            <tr>
+              <td><strong>Dirección</strong></td>
+              <td>Lineal y unidireccional.</td>
+              <td>Multidireccional e interactivo.</td>
+            </tr>
+            <tr>
+              <td><strong>Funciones</strong></td>
+              <td>No distingue funciones del lenguaje; se centra solo en transmitir.</td>
+              <td>6 funciones: referencial, emotiva, apelativa, fática, metalingüística, poética.</td>
+            </tr>
+            <tr>
+              <td><strong>Enfoque</strong></td>
+              <td>Técnico: eficiencia de transmisión, reducción de ruido.</td>
+              <td>Lingüístico: intención, estética, relación y contexto del mensaje.</td>
+            </tr>
+            <tr>
+              <td><strong>Aplicación</strong></td>
+              <td>Telecomunicaciones, ingeniería de la información.</td>
+              <td>Lingüística, literatura, análisis del discurso, comunicación social.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

@@ -1,10 +1,12 @@
 /* ══════════════════════════════════════════════
    CARDS.JS — Expandable card interaction
-   Reusable for: funciones, estilos, no-verbal
+   + Navbar toggle & active section tracking
+   Reusable for: funciones, estilos, no-verbal, pilares
    ══════════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── Expandable Cards ──────────────────────── */
   const cards = document.querySelectorAll('.card[data-expandable]');
 
   cards.forEach(card => {
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealEls.forEach(el => observer.observe(el));
 
-  /* ── Smooth scroll for header nav ─────────── */
+  /* ── Smooth scroll for all anchor links ────── */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -86,4 +88,80 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  /* ═══════════════════════════════════════════════
+     NAVBAR — Hamburger toggle & active tracking
+     ═══════════════════════════════════════════════ */
+
+  const navToggle = document.getElementById('nav-toggle');
+  const navList   = document.getElementById('nav-list');
+  const navLinks  = document.querySelectorAll('.site-nav__link');
+
+  /* ── Hamburger toggle ─────────────────────── */
+  if (navToggle && navList) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navList.classList.contains('is-open');
+      navList.classList.toggle('is-open');
+      navToggle.classList.toggle('is-active');
+      navToggle.setAttribute('aria-expanded', !isOpen);
+    });
+  }
+
+  /* ── Close mobile menu on link click ────────── */
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navList && navList.classList.contains('is-open')) {
+        navList.classList.remove('is-open');
+        navToggle.classList.remove('is-active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  /* ── Active link tracking via IntersectionObserver ── */
+  const sections = [];
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const section = document.querySelector(href);
+      if (section) {
+        sections.push({ section, link });
+      }
+    }
+  });
+
+  if (sections.length > 0) {
+    let currentActive = null;
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const match = sections.find(s => s.section === entry.target);
+          if (match) {
+            if (currentActive) {
+              currentActive.classList.remove('is-active');
+            }
+            match.link.classList.add('is-active');
+            currentActive = match.link;
+          }
+        }
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '-30% 0px -60% 0px'
+    });
+
+    sections.forEach(({ section }) => sectionObserver.observe(section));
+
+    /* Ensure 'Inicio' is highlighted when at the very top */
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < 100 && sections.length > 0) {
+        if (currentActive && currentActive !== sections[0].link) {
+          currentActive.classList.remove('is-active');
+        }
+        sections[0].link.classList.add('is-active');
+        currentActive = sections[0].link;
+      }
+    }, { passive: true });
+  }
 });
